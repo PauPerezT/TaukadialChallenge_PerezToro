@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Load MRI Videos
+Taukadial Challenge
 
 ->data.py
 

@@ -1,11 +1,14 @@
 # -*- coding: utf-8 -*-
 """
-Created on Wed Mar  3 18:55:29 2021
+Taukadial Challenge
+
+->VAD.py
+
+Created on Thu Jan 18 18:08:00 2024 for the Taukadial Challenge
 
 @author: This code was created by Tomás Arias-Vergara and Paula A. Pérez-Toro
 @email:paula.andrea.perez@fau.de
 """
-
 import numpy as np
 import scipy as sp
 from scipy import signal

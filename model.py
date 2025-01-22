@@ -1,3 +1,14 @@
+"""
+Taukadial Challenge
+
+->model.py
+
+Created on Thu Jan 18 18:08:00 2024 for the Taukadial Challenge
+
+@author: This code was created by Paula A. Pérez-Toro
+@email:paula.andrea.perez@fau.de
+"""
+
 import gc
 
 import torch
