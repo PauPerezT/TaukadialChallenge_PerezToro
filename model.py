@@ -132,16 +132,16 @@ class Whp_Ti(pl.LightningModule):
                 ids_en.append(i)
         
         if len(ids_zh)!=0 and len(ids_en)!=0:
-            outputs_zh = self.emb_zh(values['input_ids'][np.hstack(ids_zh)],decoder_input_ids=decoder_input_ids_zh.to(self.emb_zh.device)).last_hidden_state
+            outputs_zh = self.emb_zh(values['input_ids'][np.hstack(ids_zh)],decoder_input_ids=decoder_input_ids_zh.to(self.emb_zh.device)).last_hidden_state #.encoder_hidden_states
 
-            outputs_en = self.emb_en(values['input_ids'][np.hstack(ids_en)],decoder_input_ids=decoder_input_ids.to(self.emb_en.device)).last_hidden_state
+            outputs_en = self.emb_en(values['input_ids'][np.hstack(ids_en)],decoder_input_ids=decoder_input_ids.to(self.emb_en.device)).last_hidden_state #.encoder_hidden_states
             
             outputs = torch.stack((outputs_zh,outputs_en))
         elif len(ids_zh)!=0:
-            outputs = self.emb_zh(values['input_ids'][np.hstack(ids_zh)],decoder_input_ids=decoder_input_ids_zh.to(self.emb_zh.device)).last_hidden_state
+            outputs = self.emb_zh(values['input_ids'][np.hstack(ids_zh)],decoder_input_ids=decoder_input_ids_zh.to(self.emb_zh.device)).last_hidden_state #.encoder_hidden_states
 
         elif len(ids_en)!=0:
-            outputs = self.emb_en(values['input_ids'][np.hstack(ids_en)],decoder_input_ids=decoder_input_ids.to(self.emb_en.device)).last_hidden_state
+            outputs = self.emb_en(values['input_ids'][np.hstack(ids_en)],decoder_input_ids=decoder_input_ids.to(self.emb_en.device)).last_hidden_state#.encoder_hidden_states
 
         #print(outputs.shape)
         outputs = torch.mean(outputs, dim=1)
