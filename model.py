@@ -85,8 +85,8 @@ class Whp_Ti(pl.LightningModule):
         self.real = []
 
         #self.emb = Wav2Vec2Model.from_pretrained("facebook/wav2vec2-base")
-        self.emb_en = WhisperModel.from_pretrained("openai/whisper-large") #jonatasgrosman/whisper-large-zh-cv11 #
-        self.emb_zh = WhisperModel.from_pretrained("jonatasgrosman/whisper-large-zh-cv11") #jonatasgrosman/whisper-large-zh-cv11 #
+        self.emb_en = WhisperModel.from_pretrained("openai/whisper-large")#,output_hidden_states=True) #jonatasgrosman/whisper-large-zh-cv11 #
+        self.emb_zh = WhisperModel.from_pretrained("jonatasgrosman/whisper-large-zh-cv11")#,output_hidden_states=True) #jonatasgrosman/whisper-large-zh-cv11 #
         self.class_weights = class_weights.to(self.emb_en.device)
         self.drop = nn.Dropout()
         self.linear1 = nn.Linear(1280, 128)
