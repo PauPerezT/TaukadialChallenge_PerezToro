@@ -212,7 +212,7 @@ def duration_feats(sig,fs = 16000, win=0.040,step=0.01):
     fts= np.hstack((pause_len,speech_len,pause_tm, speech_tm,sp_ps,speech,pauses))
 
 
-    fts[np.where(np.isnan(dic['samples']))[0]] = 0
+    fts[np.where(np.isnan(fts))[0]] = 0
 
     return fts
 #%%
