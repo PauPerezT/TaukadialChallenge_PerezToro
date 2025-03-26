@@ -1,6 +1,6 @@
 # TaukadialChallenge_PerezToro
 
-Importnatn notes on the paper:
+Important notes on the paper:
 - Recording where manually segmented and artifact where manually removed, which may highly affect the Timing features.
 - Overfited toward healthy controls.
 - Preprocessing step play an important role here.
